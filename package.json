@@ -8,8 +8,8 @@
     "build-css": "node-sass --include-path scss public/sass/main.scss   public/css/styles.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
-  "author": "",
-  "license": "MIT",
+  "author": "Argishti Avetisyan & Sal Kuyateh",
+  "license": "GPL-3.0",
   "dependencies": {
     "body-parser": "^1.17.2",
     "ejs": "^2.5.6",
