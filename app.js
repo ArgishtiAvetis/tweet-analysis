@@ -15,25 +15,8 @@ app.use(express.static(join(__dirname, 'public')));
 app.use(bodyParser.json()); // get information from html forms
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// routes
-
-app.get('/', (req, res) => {
-	res.render('index');
-});
-
-app.get('/analyzer', (req, res) => {
-	if (req.query.username) {
-
-		var username = req.query.username;
-
-		res.render('results', {
-			username: username
-		});
-
-	} else {
-		res.redirect('/');
-	}
-});
+// pass the "app" constant and import our routes 
+require('./app/routes.js')(app);
 
 // listen on port
 app.listen(port, () => console.log(`App is running on port ${port}`));
