@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 // important constants
-const port = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 // set, use
 app.set('view engine', 'ejs');
@@ -18,5 +18,5 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // pass the "app" constant and import our routes 
 require('./app/routes.js')(app);
 
-// listen on port
-app.listen(port, () => console.log(`App is running on port ${port}`));
+// listen on PORT
+app.listen(PORT, () => console.log(`App is running on PORT ${PORT}`));
